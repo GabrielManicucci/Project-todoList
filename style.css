@@ -8,7 +8,7 @@
   font-size: 62.5%;
   --background-color: #0F1A20;
   --white-color: #cecece;
-  --input-background-color: #0d151a;
+  --input-background-color: #0a1014;
   --orange-color: #FC3639;
 
 }
@@ -27,7 +27,7 @@ body {
 }
 
 main {
-  /* border: 0.1rem solid var(--white-color); */
+  border: 0.2rem solid var(--input-background-color);
   border-radius: 1rem;
   position: relative;
   display: flex;
@@ -43,23 +43,16 @@ main {
 h1 {
   position: absolute;
   color: var(--white-color);
-  font-size: 4.6rem;
-  top: 8rem;
-
+  font-size: 5.6rem;
+  top: 5rem;
 }
 
 form {
-  /* border: 2px solid white; */
-  /* padding: 2rem; */
   position: absolute;
-  top: 20rem;
+  top: 19rem;
   display: flex;
   justify-content: center;
   width: 100%;
-  /* height: 60%; */
-  /* background-color: var(--background-color); */
-  /* border: none; */
-
 }
 
 input {
@@ -69,53 +62,45 @@ input {
   font-size: 2.5rem;
   border: none;
   border-radius: 1rem;
-  /* margin: 0.5rem; */
   padding: 2rem 0;
   padding-left: 4.5rem;
   width: 70%;
-  /* display: flex; */
-  /* align-items: center;
-  justify-content: center; */
+}
+
+input:focus {
+  /* outline: 1; */
+  outline-color: rgb(206, 206, 206);
 }
 
 .tasks {
-  /* border: 2px solid; */
-  /* position: absolute; */
   margin-top: 25rem;
-  /* display: flex; */
   width: 100%;
   height: 40rem;
-  /* flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  overflow-y: auto;
+  /* overflow-y: auto; */
   overflow-x: hidden;
 }
 
 .task {
-  /* border: 2px solid; */
+  border: 0.3rem solid var(--input-background-color);
   position: relative;
   width: 70%;
-  height: 6rem;
+  height: 7rem;
   margin: 0.7rem auto;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--input-background-color);
   overflow: hidden;
 }
 
 .task:hover {
-  background-color: var(--orange-color);
-  color: var(--input-background-color);
-  transition: all 200ms ease-out;
+  background-color: var(--input-background-color);
+  transition: all 120ms ease-in;
 }
 
-p {
-  /* border: 2px solid white; */
+.task p {
   color: var(--orange-color);
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   flex: 85%;
   height: 100%;
   display: flex;
@@ -123,32 +108,60 @@ p {
   padding-left: 4.5rem;
 }
 
-p:hover {
-  color: var(--input-background-color);
+.task p:hover,
+.task:hover {
+  cursor: pointer;
 }
 
 .delete {
   background-color: var(--white-color);
-  /* display: block; */
   flex: 15%;
   height: 100%;
   border: none;
 }
 
-/* .delete:hover {
-  background-color: var(--white-color);
-  transition: all 300ms ease-in-out;
-} */
-
 .hide {
   display: none;
 }
 
-/* div.delete:hover {
-  display: block;
-} */
+.task p.completed {
+  color: #3ca821;
+  text-decoration: line-through;
+  background-color: var(--input-background-color);
+}
 
-@media (max-width: 500px) {
+.footer {
+  /* border: 2px solid white; */
+  position: absolute;
+  top: 92%;
+  text-align: center;
+}
+
+.footer p {
+  /* position: relative; */
+  font-size: 1.5rem;
+  color: var(--white-color);
+  margin: 0.3rem;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--background-color);
+  width: 1.3rem;
+  /* display: none; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--input-background-color);
+  border-radius: 2rem;
+
+}
+
+::-webkit-scrollbar-track {
+  border: 0.2rem solid var(--input-background-color);
+  border-radius: 2rem;
+} 
+
+@media (max-width: 650px) {
   main {
     border: none;
   }
@@ -159,5 +172,14 @@ p:hover {
 
   .task {
     width: 85%;
+  }
+
+  input:focus {
+    outline-color: var(--white-color);
+  }
+
+  .footer {
+    top: 90%;
+    font-size: 1.5rem;
   }
 }
