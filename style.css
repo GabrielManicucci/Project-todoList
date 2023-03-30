@@ -1,0 +1,163 @@
+@import url(https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap);
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --background-color: #0F1A20;
+  --white-color: #cecece;
+  --input-background-color: #0d151a;
+  --orange-color: #FC3639;
+
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #0F1A20;
+  /* border: 2px solid; */
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  /* border: 0.1rem solid var(--white-color); */
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  height: 75rem;
+  width: 65rem;
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  position: absolute;
+  color: var(--white-color);
+  font-size: 4.6rem;
+  top: 8rem;
+
+}
+
+form {
+  /* border: 2px solid white; */
+  /* padding: 2rem; */
+  position: absolute;
+  top: 20rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* height: 60%; */
+  /* background-color: var(--background-color); */
+  /* border: none; */
+
+}
+
+input {
+  position: relative;
+  background-color: var(--input-background-color);
+  color: var(--white-color);
+  font-size: 2.5rem;
+  border: none;
+  border-radius: 1rem;
+  /* margin: 0.5rem; */
+  padding: 2rem 0;
+  padding-left: 4.5rem;
+  width: 70%;
+  /* display: flex; */
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.tasks {
+  /* border: 2px solid; */
+  /* position: absolute; */
+  margin-top: 25rem;
+  /* display: flex; */
+  width: 100%;
+  height: 40rem;
+  /* flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.task {
+  /* border: 2px solid; */
+  position: relative;
+  width: 70%;
+  height: 6rem;
+  margin: 0.7rem auto;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--input-background-color);
+  overflow: hidden;
+}
+
+.task:hover {
+  background-color: var(--orange-color);
+  color: var(--input-background-color);
+  transition: all 200ms ease-out;
+}
+
+p {
+  /* border: 2px solid white; */
+  color: var(--orange-color);
+  font-size: 2.2rem;
+  flex: 85%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 4.5rem;
+}
+
+p:hover {
+  color: var(--input-background-color);
+}
+
+.delete {
+  background-color: var(--white-color);
+  /* display: block; */
+  flex: 15%;
+  height: 100%;
+  border: none;
+}
+
+/* .delete:hover {
+  background-color: var(--white-color);
+  transition: all 300ms ease-in-out;
+} */
+
+.hide {
+  display: none;
+}
+
+/* div.delete:hover {
+  display: block;
+} */
+
+@media (max-width: 500px) {
+  main {
+    border: none;
+  }
+
+  form .input {
+    width: 100%;
+  }
+
+  .task {
+    width: 85%;
+  }
+}
