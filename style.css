@@ -16,7 +16,6 @@
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #0F1A20;
-  /* border: 2px solid; */
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -68,7 +67,6 @@ input {
 }
 
 input:focus {
-  /* outline: 1; */
   outline-color: rgb(206, 206, 206);
 }
 
@@ -76,7 +74,6 @@ input:focus {
   margin-top: 25rem;
   width: 100%;
   height: 40rem;
-  /* overflow-y: auto; */
   overflow-x: hidden;
 }
 
@@ -101,7 +98,7 @@ input:focus {
 .task p {
   color: var(--orange-color);
   font-size: 2.4rem;
-  flex: 85%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -131,14 +128,12 @@ input:focus {
 }
 
 .footer {
-  /* border: 2px solid white; */
   position: absolute;
   top: 92%;
   text-align: center;
 }
 
 .footer p {
-  /* position: relative; */
   font-size: 1.5rem;
   color: var(--white-color);
   margin: 0.3rem;
@@ -147,7 +142,6 @@ input:focus {
 ::-webkit-scrollbar {
   background-color: var(--background-color);
   width: 1.3rem;
-  /* display: none; */
 }
 
 ::-webkit-scrollbar-thumb {
