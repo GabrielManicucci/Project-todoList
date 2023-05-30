@@ -129,12 +129,13 @@ input:focus {
 
 .footer {
   position: absolute;
-  top: 92%;
+  top: 91%;
   text-align: center;
+  width: 75%;
 }
 
 .footer p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--white-color);
   margin: 0.3rem;
 }
