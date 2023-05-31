@@ -4,6 +4,17 @@ const tasks = document.querySelector(".tasks")
 
 const todos = JSON.parse(localStorage.getItem("list"))
 
+function mobileResponsivity() {
+  const widthScrenn = screen.width
+  const textFooter = document.getElementById('textFooter')
+
+  if (widthScrenn < 650) {
+    textFooter.innerText =  "touch to complete and press to delete"
+  }
+}
+
+mobileResponsivity()
+
 if (todos) {
   todos.forEach(todo => addTodo(todo))
   console.log(todos)
