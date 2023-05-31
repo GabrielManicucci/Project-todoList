@@ -43,6 +43,7 @@ h1 {
   font-size: 5.2rem;
   margin-top: 6rem;
   margin-bottom: 0;
+  text-align: center;
 }
 
 form {
@@ -61,7 +62,6 @@ input {
   border-radius: 1rem;
   padding: 2rem 0;
   padding-left: 4.5rem;
-  /* width: 30rem; */
 }
 
 input:focus {
